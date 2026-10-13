@@ -1,0 +1,41 @@
+name: Import pinned Nahida base
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-base.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: initial-base-import
+  cancel-in-progress: false
+jobs:
+  import:
+    if: github.repository == 'its-hecker/pixelos_proprietary_vendor_google_coral'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - name: Import the pinned base once, preserving integration files
+        env:
+          GIT_LFS_SKIP_SMUDGE: '1'
+          GIT_LFS_SKIP_PUSH: '1'
+        run: |
+          set -euo pipefail
+          if [[ -f .github/floral-base-imported.json ]]; then
+            echo 'Pinned base is already imported; no files changed.'
+            exit 0
+          fi
+          floral_source="$RUNNER_TEMP/floral-source"
+          floral_stage="$RUNNER_TEMP/floral-stage"
+          git clone --quiet --depth=1 --branch lineage-24.0 https://github.com/Nahida-Prjkt/proprietary_vendor_google_coral.git "$floral_source"
+          git -C "$floral_source" fetch --quiet --depth=1 origin c957fead4960a897ff75132f3acc5ec64d492ada
+          mkdir -p "$floral_stage"
+          git -C "$floral_source" archive c957fead4960a897ff75132f3acc5ec64d492ada | tar -x -C "$floral_stage"
+          cp -a "$floral_stage/." "$GITHUB_WORKSPACE/"
+          printf '{"upstream":"c957fead4960a897ff75132f3acc5ec64d492ada","snapshot":true}\n' > .github/floral-base-imported.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit --quiet -m 'Import pinned Nahida snapshot for PixelOS Floral build'
+          git push origin HEAD:main
