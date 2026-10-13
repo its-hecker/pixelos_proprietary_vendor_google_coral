@@ -1,0 +1,6 @@
+{
+  "repository": "Nahida-Prjkt/proprietary_vendor_google_coral",
+  "branch": "lineage-24.0",
+  "commit": "c957fead4960a897ff75132f3acc5ec64d492ada",
+  "copy": "independent snapshot; upstream file/license attribution retained"
+}
