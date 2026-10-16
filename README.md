@@ -2,7 +2,11 @@
 
 Independent snapshot of `Nahida-Prjkt/proprietary_vendor_google_coral`,
 `lineage-24.0`, at the commit in [UPSTREAM.json](UPSTREAM.json).
-The generated base makefiles and proprietary blob bytes are preserved.
+The proprietary blob bytes are preserved. The stock camera prebuilt has a
+distinct `-coral` build module name and the original executable `stem`, so Soong
+does not merge its AIDL V1 dependency graph with the newer AOSP source service.
+Its binary path, init configuration, VINTF declaration and shared libraries
+remain unchanged. The device extraction list reproduces this module suffix.
 
 Enhanced Face ID and Motion Sense packages are supplied by the standalone
 [Face ID](https://github.com/its-hecker/floral-3D-faceid-plugin) and

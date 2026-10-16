@@ -22073,7 +22073,8 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.camera.provider@2.7-service-google",
+    name: "android.hardware.camera.provider@2.7-service-google-coral",
+    stem: "android.hardware.camera.provider@2.7-service-google",
     owner: "google",
     target: {
         android_arm64: {

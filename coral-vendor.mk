@@ -1483,7 +1483,7 @@ PRODUCT_PACKAGES += \
     diag_socket_log \
     diag_uart_log \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.camera.provider@2.7-service-google \
+    android.hardware.camera.provider@2.7-service-google-coral \
     android.hardware.confirmationui@1.0-service-google \
     android.hardware.drm-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
