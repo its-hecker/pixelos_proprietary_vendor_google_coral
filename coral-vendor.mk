@@ -453,7 +453,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/coral/proprietary/vendor/etc/default_f2proto.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_f2proto.mps \
     vendor/google/coral/proprietary/vendor/etc/default_flame.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_flame.mps \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/google/coral/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google.rc \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.confirmationui@1.0-service-google.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.confirmationui@1.0-service-google.rc \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
     vendor/google/coral/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
