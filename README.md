@@ -12,6 +12,10 @@ Enhanced Face ID and Motion Sense packages are supplied by the standalone
 [Face ID](https://github.com/its-hecker/floral-3D-faceid-plugin) and
 [Motion Sense](https://github.com/its-hecker/floral-motionsense-plugin) repositories.
 Their product files replace the selected legacy packages after base inheritance.
+The eight replaced stock services/libraries use `no_full_install: true`, keeping
+them available for dependency resolution while exporting the plugins' copy rules
+to Make. The selected camera prebuilt overrides the unused AOSP source service;
+manifest preparation also suppresses that source service's legacy copy rules.
 This vendor repository does not contain the integrated Infinity Face HAL repairs,
 OsloFeedback APK or custom wallpaper additions.
 

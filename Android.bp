@@ -16194,6 +16194,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "android.hardware.keymaster@4.1-impl.nos",
+    no_full_install: true,
     owner: "google",
     strip: {
         none: true,
@@ -18382,6 +18383,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libairbrush-pixel",
+    no_full_install: true,
     owner: "google",
     strip: {
         none: true,
@@ -18626,6 +18628,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libface-calibration-proto",
+    no_full_install: true,
     owner: "google",
     strip: {
         none: true,
@@ -18652,6 +18655,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libface-enroll-proto",
+    no_full_install: true,
     owner: "google",
     strip: {
         none: true,
@@ -18678,6 +18682,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libfaceauth-util",
+    no_full_install: true,
     owner: "google",
     strip: {
         none: true,
@@ -22074,6 +22079,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "android.hardware.camera.provider@2.7-service-google-coral",
+    overrides: ["android.hardware.camera.provider@2.7-service-google"],
     stem: "android.hardware.camera.provider@2.7-service-google",
     owner: "google",
     target: {
@@ -22433,6 +22439,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "android.hardware.keymaster@4.1-service.citadel",
+    no_full_install: true,
     owner: "google",
     target: {
         android_arm64: {
@@ -22469,6 +22476,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "android.hardware.neuralnetworks@1.2-service-noronha",
+    no_full_install: true,
     owner: "google",
     target: {
         android_arm64: {
@@ -22749,6 +22757,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "vendor.google.airbrush@1.0-service",
+    no_full_install: true,
     owner: "google",
     target: {
         android_arm64: {
