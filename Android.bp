@@ -22081,6 +22081,7 @@ cc_prebuilt_binary {
     name: "android.hardware.camera.provider@2.7-service-google-coral",
     overrides: ["android.hardware.camera.provider@2.7-service-google"],
     stem: "android.hardware.camera.provider@2.7-service-google",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google.rc"],
     owner: "google",
     target: {
         android_arm64: {
