@@ -90,7 +90,6 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleHEMIDELTA \
     OemDmTrigger \
     SprintDM \
-    TetheringEntitlement \
     USCCDM \
     WfcActivation \
     QtiTelephonyService \
