@@ -115,8 +115,7 @@ PRODUCT_PACKAGES += \
     com.android.hotwordenrollment.common.util \
     com.google.android.camera.extensions \
     google-ril \
-    qcrilhook \
-    vendor.qti.hardware.radio.atcmdfwd@1.0.xml
+    qcrilhook
 
 PRODUCT_PACKAGES += \
     product_priv-app_DMService_lib_arm_libdmengine_so \
